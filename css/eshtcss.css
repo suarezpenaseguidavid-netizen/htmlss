@@ -23,4 +23,13 @@ h2{
     color: goldenrod;
     font-family: cursive;
 }
-
+.contenedor_titulos{
+    display: flex;
+}
+.contenedor_titulos_p{
+    margin: 17px;
+}
+.img_2{
+    float: right;
+    margin-left: 15px;
+}
