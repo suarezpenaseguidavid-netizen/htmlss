@@ -1,0 +1,26 @@
+body{
+    background-image: url(../img/istockphoto-1864437299-612x612.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+h1{
+    text-align: center;
+    color: goldenrod;
+    font-family: cursive;
+}
+.cuadro_1{
+    border: 2px solid goldenrod;
+    background-color: transparent;
+    padding: 2px;
+
+}
+p{
+    color: goldenrod;
+}
+h2{
+    color: goldenrod;
+    font-family: cursive;
+}
+
