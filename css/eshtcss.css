@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    margin: 15px 20px 15px 5px;
+    padding: 0;
+}
 body{
     background-image: url(../img/istockphoto-1864437299-612x612.jpg);
     background-repeat: no-repeat;
@@ -32,4 +37,39 @@ h2{
 .img_2{
     float: right;
     margin-left: 15px;
+}
+.boton{
+    display:inline-block;
+    padding: 10px 2opx;
+    background-color: rgb(250, 181, 7);
+    color: rgb(5, 66, 5);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.boton:hover{
+    background-color: transparent;
+}
+.card{
+    width: 300px;
+    border: 2px solid goldenrod;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+.card_2{
+    width: 1270px;
+    border: 2px solid goldenrod;
+    padding: 16px;
+    border-radius: 1px;
+    background-color: transparent;
+}
+.caja{
+    width: 1270px;
+    border: 2px solid goldenrod;
+    background-color: transparent;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    color: goldenrod;
 }
