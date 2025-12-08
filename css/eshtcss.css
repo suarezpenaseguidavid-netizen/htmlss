@@ -1,75 +1,89 @@
-* {
-    box-sizing: border-box;
-    margin: 15px 20px 15px 5px;
-    padding: 0;
-}
-body{
-    background-image: url(../img/istockphoto-1864437299-612x612.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-h1{
-    text-align: center;
-    color: goldenrod;
-    font-family: cursive;
-}
-.cuadro_1{
-    border: 2px solid goldenrod;
-    background-color: transparent;
-    padding: 2px;
+#c1red{
+    background-color: red;
+    width: 300px;
+    height: 80px;
+    float: left;
 
 }
-p{
-    color: goldenrod;
-}
-h2{
-    color: goldenrod;
-    font-family: cursive;
-}
-.contenedor_titulos{
-    display: flex;
-}
-.contenedor_titulos_p{
-    margin: 17px;
-}
-.img_2{
-    float: right;
-    margin-left: 15px;
-}
-.boton{
-    display:inline-block;
-    padding: 10px 2opx;
-    background-color: rgb(250, 181, 7);
-    color: rgb(5, 66, 5);
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-}
-.boton:hover{
-    background-color: transparent;
-}
-.card{
+#c2red{
+    background-color: red;
     width: 300px;
-    border: 2px solid goldenrod;
-    padding: 16px;
-    border-radius: 8px;
-    background-color: transparent;
+    height: 190px;
+    float: left;
+    margin-top: 91px;
+    margin-left: -300px;
 }
-.card_2{
-    width: 1270px;
-    border: 2px solid goldenrod;
-    padding: 16px;
-    border-radius: 1px;
-    background-color: transparent;
+#c3red{
+    background-color: red;
+    width: 300px;
+    height: 80px;
+    margin: 4px;
+    float: left;
+    margin-top: 291px;
+    margin-left:-300px ;
 }
-.caja{
-    width: 1270px;
-    border: 2px solid goldenrod;
-    background-color: transparent;
-    padding: 20px;
-    margin: 0 auto;
-    text-align: center;
-    color: goldenrod;
+#c4red{
+    background-color: red;
+    width: 300px;
+    height: 220px;
+    margin: 4px;
+    float: left;
+    margin-top: 386px;
+    margin-left: -300px;
+    overflow: auto;
 }
+#c5black{
+    background-color: black;
+    color: red;
+    width: 300px;
+    height: 400px;
+    float: left;
+    margin-top: auto;
+    overflow: auto;
+}
+#c6black{
+    background-color: black;
+    color: red;
+    width: 300px;
+    height: 100px;
+    float: left;
+    margin-top: 410px;
+    margin-left: -298px;
+}
+#c7black{
+    background-color: black;
+    color: red;
+    width: 300px;
+    height: 100px;
+    float: left;
+    margin-top: 520px;
+    margin-left: -300px;
+}
+#c8red{
+    background-color: red;
+    margin: 4px;
+    color: black;
+    width: 300px;
+    height: 360px;
+    float: left;
+    overflow: auto;
+}
+#c9red{
+    background-color: red;
+    color: black;
+    width: 300px;
+    height: 115px;
+    float: left;
+    margin-top: -137px;
+    margin-left: 308px;
+}
+#c10red{
+    background-color: red;
+    color: black;
+    width: 300px;
+    height: 120px;
+    float: left;
+    margin-top: -10px;
+    margin-left: 308px;
+}
+
