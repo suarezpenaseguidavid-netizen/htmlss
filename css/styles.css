@@ -24,8 +24,8 @@
     width: 30%;
 }
 .logotipo{
-    width: 75px;
-    height: 90px;
+    width: 80%;
+    height: 14%;
     background-color: white;
     position: relative;
     left: 11px;
@@ -37,8 +37,8 @@
     border-radius: 50%;
 }
 .home{
-    width: 75px;
-    height: 90px;
+    width: 80%;
+    height: 14%;
     background-color: white;
     position: relative;
     left: 11px;
@@ -51,8 +51,8 @@
     border-radius: 50%;
 }
 .lupa{
-    width: 75px;
-    height: 90px;
+    width: 80%;
+    height: 14%;
     background-color: white;
     position: relative;
     left: 11px;
@@ -65,8 +65,8 @@
     border-radius: 50%;
 }
 .alerta{
-    width: 75px;
-    height: 90px;
+    width: 80%;
+    height: 14%;
     background-color: white;
     position: relative;
     left: 11px;
@@ -79,8 +79,8 @@
     border-radius: 50%;
 }
 .perfil{
-    width: 75px;
-    height: 90px;
+    width: 80%;
+    height: 14%;
     background-color: white;
     position: relative;
     left: 11px;
@@ -93,8 +93,8 @@
     border-radius: 50%;
 }
 .opciones{
-    width: 75px;
-    height: 90px;
+    width: 80%;
+    height: 14%;
     background-color: white;
     position: relative;
     left: 11px;
@@ -221,12 +221,12 @@ p{
     width: 100%;
     height: 571vh;
     background-color: white;
-    border: 3px solid black;
+    border: 1px solid black;
 }
 .publicacion{
     width: 99%;
     height: 25%;
-    background-color: wheat;
+    background-color: black;
     border: 3px solid black;
     position: relative;
     left: auto;
@@ -240,6 +240,7 @@ p{
     background-color: white;
     border: 3px solid black;
     margin: 3px;
+    border-radius: 30px;
 }
 .publicacion-1-img{
     width: 98%;
@@ -248,6 +249,7 @@ p{
     margin: 3px;
     border: 3px solid black;
     color: black    ;
+    border-radius: 20px;
 }
 .img-persona{
     width: 10%;
@@ -264,6 +266,7 @@ p{
 .img-muro1{
     width: 100%;
     height: 100%;
+    border-radius: 20px;
 }
 .buscador{
     display: flex;
@@ -275,13 +278,18 @@ p{
     border: 1px solid black;
     border-right:none;
     outline: none;
+    border-radius: 10px;
 }
 .pasando{
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
     width: 100%;
     height: 55%;
     background-color: white;
     border: 1px solid black;
     margin-top: 10px;
+    border-radius: 8px;
 }
 h1{
     text-align: center;
@@ -290,4 +298,16 @@ h1{
 h3{
     text-align:left;
     color: black;
+}
+.btn{
+    display: inline-block;
+    padding: 1% 2%;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 1px;
+}
+.btn:hover{
+    background-color: wheat;
 }
