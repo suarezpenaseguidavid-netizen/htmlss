@@ -1,0 +1,349 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 8fr 4fr ;
+    gap: 1%;
+    height: 97vh;
+}
+.col-1{
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+    background-color: black;
+    padding: 10%;
+}
+.col-2{
+    background-color: white;
+    padding: 1%;
+    overflow: scroll;
+}
+.col-3{
+    background-color: black;
+    padding: 2%;
+}
+.icono{
+    font-size: 24px;
+    color: white;
+    margin: 29%;
+    cursor: pointer;
+}
+.icono:hover{
+    color: #1da1f2 ;
+}
+.img-icono{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.container2{
+    display: flex;
+    gap: 1px;
+    width: 100%;
+    height: 6%;
+  
+    border-radius: 8px;
+}
+.columna2-1{
+   
+    width: 50%;
+    border: 1px;
+    border-radius: 8px;
+   
+}
+.columna2-2{
+  
+    width: 50%;
+    border: 1px;
+    border-radius: 8px;
+}
+.boton{
+   padding: 10px 20px;
+   background-color: black;
+   color: white;
+   border: 1px solid black;
+   border-radius: 5px;
+   width: 100%;
+   height: 100%;
+   cursor: pointer;
+
+}
+.boton:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+.cja{
+    background-color: #0b0b0b;
+    border-bottom: 1px solid #222;
+    padding: 12px;
+    margin: 1px;
+    border-radius: 6px;
+}
+.persona{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.persona .avatar{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.06);
+}
+.post-input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #eee;
+    font-size: 99%;
+    padding: 2% 2%;
+}
+.post-bottom{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.post-icons i{
+    font-size: 18px;
+    color: #1da1f2;
+    cursor: pointer;
+}
+.post-btn{
+    margin-left: auto;
+    background: #1da1f2;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.img-persona{
+    width: 9%;
+    height: 100%;
+    border-radius: 50%;
+}
+.muro{
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    
+}
+.publicacion{
+    width: 95%;
+    height: 50%;
+    background-color: #111;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px auto;
+}
+.usuario{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.foto-perfil{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.texto{
+    margin: 10px 0;
+}
+.img-post{
+    width: 100%;
+    border-radius: 8px;
+    height: 93%;
+}
+.m-img{
+    width: 100%;
+    height: 95vh;
+}
+.buscador{
+    width: 100%;
+    height: 7%;
+}
+.buscador input{
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+    height: 50%;
+    width: 70%;
+}
+.boton-bus{
+    width: 18%;
+    height: 91%;
+}
+.pasando{
+    width: 100%;
+    height: 100%;
+    gap: 2%;
+
+}
+.sucesos{
+    background-color: white;
+    height: 45%;
+    border: 1px solid black;
+    padding: 2%;
+}
+.b-pasando{
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    color: white;
+    margin: 1%;
+}.post-actions{
+  display:flex;
+  gap:30px;
+  color:#6e767d;
+  font-size:14px;
+}
+
+.post-actions span{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  cursor:pointer;
+}
+
+.post-actions span:hover{
+  color:#1da1f2;
+}
+.tweet-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 19%;
+}
+body{
+  background:#000;
+  font-family:Arial;
+}
+
+.otras-opciones{
+  width:350px;
+  margin-left:20px;
+}
+
+.caja-buscador input{
+  width: 85%;
+  padding:12px;
+  border-radius:30px;
+  border:1px solid #2f3336;
+  background:#000;
+  color:white;
+}
+
+.card{
+  border:1px solid #2f3336;
+  border-radius:15px;
+  padding:15px;
+  margin-top:15px;
+  color:white;
+  width: 83%;
+}
+
+.subscribe button{
+  background:#1d9bf0;
+  border:none;
+  padding:10px 20px;
+  border-radius:25px;
+  color:white;
+  margin-top:10px;
+  cursor:pointer;
+}
+
+.trends h2,
+.follow h2{
+  margin-bottom:10px;
+}
+
+.trend{
+  margin-bottom:12px;
+}
+
+.trend span{
+  font-size:12px;
+  color:gray;
+}
+
+.trend p{
+  font-weight:bold;
+}
+
+.card a{
+  color:#1d9bf0;
+  text-decoration:none;
+}
+
+.user{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.user img{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+}
+
+.user button{
+  margin-left:auto;
+  padding:6px 15px;
+  border-radius:20px;
+  border:none;
+  font-weight:bold;
+}
+.hamburguesa{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    text-align: right;
+}
+#menu-toggle{
+    display: none;
+}
+.menu-movil{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background: #000;
+    color: white;
+    padding: 20px;
+    transition: 0.3s;
+}
+#menu-toggle:checked ~ .menu-movil{
+    right: 0;
+}
+@media(max-width:768px){
+    .col-3{
+        display: none;
+    }
+    .hamburguesa{
+        display: block;
+        margin-bottom: 10px;
+
+    }
+}
+@media (max-width:768px){
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+    }
+    .col-1{
+        width: 14%;
+        height: 10%;
+        order: 2;
+        flex-direction: row;
+    }
+}
+@media (max-width:768px){
+    .user button{
+        width: 26%;
+    }
+}
