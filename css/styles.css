@@ -67,7 +67,7 @@
 
 }
 .boton:hover{
-    background-color: whitesmoke;
+    background-color: #1d9bf0;
     color: black;
 }
 .cja{
@@ -329,6 +329,9 @@ body{
         margin-bottom: 10px;
 
     }
+    .cja{
+        margin: 1%;
+    }
 }
 @media (max-width:768px){
     .contenedor{
@@ -340,10 +343,28 @@ body{
         height: 10%;
         order: 2;
         flex-direction: row;
+        padding: 1%;
+        gap: 43%;
     }
+    .boton{
+        border-radius: none;
+        border: 1px solid white;
+    }
+    
 }
 @media (max-width:768px){
     .user button{
         width: 26%;
+    }
+    .publicacion{
+        padding: 2%;
+        height: 66vh;
+    }
+    .img-post{
+        height:50%;
+    }
+    .tweet-icons{
+        position: relative;
+        bottom: 66%;
     }
 }
