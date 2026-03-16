@@ -320,6 +320,7 @@ body{
 #menu-toggle:checked ~ .menu-movil{
     right: 0;
 }
+/* hamburguesa */
 @media(max-width:768px){
     .col-3{
         display: none;
@@ -333,7 +334,24 @@ body{
         margin: 1%;
     }
 }
+/* contexto en movil */
 @media (max-width:768px){
+    .user button{
+        width: 26%;
+    }
+    .publicacion{
+        padding: 2%;
+        height: 72vh;
+    }
+    .img-post{
+        height:50%;
+    }
+    .tweet-icons{
+        position: relative;
+        bottom: 64%;
+        gap: 18%;
+        margin: 2%;
+    }
     .contenedor{
         display: flex;
         flex-direction: column;
@@ -349,22 +367,5 @@ body{
     .boton{
         border-radius: none;
         border: 1px solid white;
-    }
-    
-}
-@media (max-width:768px){
-    .user button{
-        width: 26%;
-    }
-    .publicacion{
-        padding: 2%;
-        height: 66vh;
-    }
-    .img-post{
-        height:50%;
-    }
-    .tweet-icons{
-        position: relative;
-        bottom: 66%;
     }
 }
