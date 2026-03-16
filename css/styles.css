@@ -334,14 +334,13 @@ body{
         margin: 1%;
     }
 }
-/* contexto en movil */
-@media (max-width:768px){
+@media(max-width:768px){
     .user button{
         width: 26%;
     }
     .publicacion{
         padding: 2%;
-        height: 72vh;
+        height: 68vh;
     }
     .img-post{
         height:50%;
@@ -365,7 +364,10 @@ body{
         gap: 43%;
     }
     .boton{
-        border-radius: none;
         border: 1px solid white;
     }
+    .card{
+        width: 93%;
+    }
+    
 }
