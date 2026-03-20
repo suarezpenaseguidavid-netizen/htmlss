@@ -109,6 +109,12 @@
     color: #1da1f2;
     cursor: pointer;
 }
+.post-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 33%;
+    align-items: center;
+}
 .post-btn{
     margin-left: auto;
     background: #1da1f2;
@@ -320,36 +326,13 @@ body{
 #menu-toggle:checked ~ .menu-movil{
     right: 0;
 }
-/* hamburguesa */
-@media(max-width:768px){
+@media(max-width:1024px){
     .col-3{
         display: none;
     }
     .hamburguesa{
         display: block;
-        margin-bottom: 10px;
-
-    }
-    .cja{
-        margin: 1%;
-    }
-}
-@media(max-width:768px){
-    .user button{
-        width: 26%;
-    }
-    .publicacion{
-        padding: 2%;
-        height: 68vh;
-    }
-    .img-post{
-        height:50%;
-    }
-    .tweet-icons{
-        position: relative;
-        bottom: 64%;
-        gap: 18%;
-        margin: 2%;
+        margin-bottom: 1%;
     }
     .contenedor{
         display: flex;
@@ -360,14 +343,206 @@ body{
         height: 10%;
         order: 2;
         flex-direction: row;
-        padding: 1%;
-        gap: 43%;
+        padding: initial;
+        gap: 82%;
     }
     .boton{
         border: 1px solid white;
+        font-size: 30px;
     }
     .card{
-        width: 93%;
+        width: 95%;
     }
+    .icono{
+        font-size: 26px;
+        color: white;
+        margin: 29%;
+        cursor: pointer;
+    }
+    .tweet-icons{
+        gap: 25%;
+        font-size: 25px;
+    }
+    .texto{
+        font-size: 35px;
+    }
+    h3{
+        font-size: 35px;
+    }
+    .foto-perfil{
+        width: 11%;
+        height: 11%;
+        border-radius: 50%;
+    }
+    .post-icons {
+        align-items: center;
+        gap: 45%;
+        display: flex;
+        flex-direction: row;
+    }
+    .post-icons i{
+        font-size: 30px;
+    }
+    .post-input{
+        font-size: 30px;
+    }
+    .caja-buscador input{
+        font-size: 30px;
+    }
+    .card{
+        font-size: 30px;
+    }
+    .trend span{
+        font-size: 25px;
+    }
+    .user button{
+        font-size: 25px;
+    }
+}
+
+ /*hamburguesa 768p*/
+@media(max-width:768px){
+    .col-3{
+        display: none;
+    }
+    .hamburguesa{
+        display: block;
+        margin-bottom: 10px;
+
+    }
+     .col-1{
+        width: 14%;
+        height: 10%;
+        order: 2;
+        flex-direction: row;
+        padding: initial;
+        gap: 75%;
+    }
+     .tweet-icons{
+        gap: 25%;
+        font-size: 19px;
+    }
+    .texto{
+        font-size: 25px;
+    }
+     h3{
+        font-size: 25px;
+    }
+    .foto-perfil{
+        width: 11%;
+        height: 11%;
+        border-radius: 50%;
+    }
+    .post-icons {
+        align-items: center;
+        gap: 31%;
+        display: flex;
+        flex-direction: row;
+    }
+    .post-icons i{
+        font-size: 25px;
+    }
+    .post-input{
+        font-size: 25px;
+    }
+    .caja-buscador input{
+        font-size: 25px;
+    }
+    .card{
+        font-size: 25px;
+    }
+    .trend span{
+        font-size: 25px;
+    }
+    .user button{
+        font-size: 25px;
+    }
+    .boton{
+        font-size: 25px;
+    }
+
+
     
 }
+@media(max-width:480px){
+    .col-3{
+        display: none;
+    }
+    .hamburguesa{
+        display: block;
+        margin-bottom: 10px;
+
+    }
+     .col-1{
+        width: 14%;
+        height: 10%;
+        order: 2;
+        flex-direction: row;
+        padding: initial;
+        gap: 57%;
+    }
+    .tweet-icons{
+        gap: 15%;
+        font-size: 17px;
+
+    }
+    .publicacion{
+        padding: 1%;
+        height: 33rem;
+    }
+    .img-post{
+        height: 21rem;
+    }
+    .m-img{
+        height: 24rem;
+    }
+    .texto{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    .post-icons{
+        gap: 15%;
+    }
+    .post-input{
+        font-size: 20px;
+    }
+    .boton{
+        font-size: 15px;
+    }
+    .cja{
+        margin: 1%;
+    }
+    .caja-buscador input{
+        font-size: 15px;
+    }
+    .card{
+        font-size: 15px;
+    }
+    .trend span{
+        font-size: 15px;
+    }
+    .user button{
+        font-size: 15px;
+    }
+    
+    
+      
+
+    
+
+}
+@media(max-width:378px){
+    .col-1{
+        width: 14%;
+        height: 10%;
+        order: 2;
+        flex-direction: row;
+        padding: initial;
+        gap: 57%;
+    }
+    
+
+}
+
