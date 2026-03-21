@@ -479,70 +479,61 @@ body{
         order: 2;
         flex-direction: row;
         padding: initial;
-        gap: 57%;
+        gap: 43%;
     }
     .tweet-icons{
-        gap: 15%;
-        font-size: 17px;
+        gap: 16%;
+        font-size: 114%;
 
     }
     .publicacion{
         padding: 1%;
-        height: 33rem;
+        height: 35rem;
     }
     .img-post{
         height: 21rem;
     }
     .m-img{
-        height: 24rem;
+        height: 23rem;
     }
     .texto{
-        font-size: 20px;
+        font-size: 129%;
     }
     h3{
-        font-size: 20px;
+        font-size: 129%;
+    }
+    .persona{
+        gap: 3%;
     }
     .post-icons{
-        gap: 15%;
+        gap: 8%;
+        font-size: 154%;
     }
     .post-input{
-        font-size: 20px;
+        font-size: 129%;
     }
     .boton{
-        font-size: 15px;
+        font-size: 99%;
     }
     .cja{
         margin: 1%;
+    
     }
     .caja-buscador input{
-        font-size: 15px;
+        font-size: 129%;
     }
     .card{
-        font-size: 15px;
+        font-size: 82%;
     }
     .trend span{
-        font-size: 15px;
+        font-size: 129%;
     }
     .user button{
-        font-size: 15px;
+        font-size: 110%;
     }
-    
-    
-      
-
+   
     
 
 }
-@media(max-width:378px){
-    .col-1{
-        width: 14%;
-        height: 10%;
-        order: 2;
-        flex-direction: row;
-        padding: initial;
-        gap: 57%;
-    }
-    
 
-}
 
