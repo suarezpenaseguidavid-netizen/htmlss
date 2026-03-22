@@ -487,17 +487,18 @@ body{
 
     }
     .publicacion{
-        padding: 1%;
-        height: 35rem;
+        padding: 2%;
+        height: 32rem;
     }
     .img-post{
         height: 21rem;
     }
     .m-img{
         height: 23rem;
+        
     }
     .texto{
-        font-size: 129%;
+        font-size: 94%;
     }
     h3{
         font-size: 129%;
@@ -506,7 +507,7 @@ body{
         gap: 3%;
     }
     .post-icons{
-        gap: 8%;
+        gap: 6%;
         font-size: 154%;
     }
     .post-input{
