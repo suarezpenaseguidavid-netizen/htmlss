@@ -100,7 +100,7 @@
 .post-icons{
     display: flex;
     flex-direction: row;
-    gap: 33%;
+    gap: 12%;
     align-items: center;
 }
 .post-btn{
@@ -113,8 +113,7 @@
     cursor: pointer;
 }
 .img-persona{
-    width: 9%;
-    height: 100%;
+    width: 6%;
     border-radius: 50%;
 }
 .muro{
@@ -136,8 +135,8 @@
     gap: 10px;
 }
 .foto-perfil{
-    width: 8%;
-    height: 3rem;
+    width: 6%;
+    height: 6vh;
     border-radius: 50%;
 }
 .texto{
@@ -260,6 +259,7 @@ body{
 #menu-toggle:checked ~ .menu-movil{
     right: 0;
     background-color: white;
+    border: 1px solid whitesmoke;
 }
 .fab{
     width: 55px;
@@ -276,6 +276,7 @@ body{
 }
 h3{
     color: black;
+    
 }
 .icon{
     color: black;
@@ -457,10 +458,10 @@ h3{
         
     }
     .texto{
-        font-size: 94%;
+        font-size: 86%;
     }
     h3{
-        font-size: 129%;
+        font-size: 100%;
     }
     .persona{
         gap: 3%;
@@ -481,9 +482,11 @@ h3{
     }
     .caja-buscador input{
         font-size: 129%;
+        width: 93%;
     }
     .card{
         font-size: 82%;
+        width: 91%;
     }
     .trend span{
         font-size: 129%;
