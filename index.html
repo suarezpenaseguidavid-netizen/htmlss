@@ -3,115 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluacion</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
 </head>
 <body>
-    <header class="header-flex">
-        <h1 class="titulo">Aurora café</h1>
-        <div class="interaccion">
-           <p>Inicio</p>
-           <p>Productos</p>
-           <p>Nosotros</p>
-           <p>Contactos</p>
-        </div>
-    </header>
-    <section class="atencion">
-        <div class="atenorder">
-           <h2>El mejor cafe de colombia</h2>
-           <p>Granos extraidos del eje cafetero, tostados cada mañana</p>
-           <button class="boton-menu">ver menu</button>
-        </div>
-        <div class="marco-imgatencion">
-           <div class="img-atencion">[ imagen ]</div>
-        </div>
-    </section>
-    <main class="main-flex">
-        <div class="marco-h1">
-           <h1>Productos</h1>
-        </div>
-        <div class="marco-h1-2">
-            <h1>Nuestros productos</h1>
-        </div>
-        <div class="marco-articulo">
-           <article class="articulos">
-               <div class="img-articulo">[ imagen ]</div>
-               <div class="marco-presio">
-                  <h2>Expresso</h2>
-                  <p>Cafe consentrado instenso</p>
-                  <div class="precio">
-                     <h2>$ 4.500</h2>
-                  </div>
-               </div>
-           </article>
-           <article class="articulos">
-               <div class="img-articulo">[ imagen ]</div>
-               <div class="marco-presio">
-                  <h2>Cappuccino</h2>
-                  <p>Espresso con leche y espuma</p>
-                  <div class="precio">
-                     <h2>$ 7.800</h2>
-                  </div>
-               </div>
-           </article>
-           <article class="articulos">
-               <div class="img-articulo">[ imagen ]</div>
-               <div class="marco-presio">
-                  <h2>Latte vainilla</h2>
-                  <p>Con jarabe de vainilla</p>
-                  <div class="precio">
-                     <h2>$ 8.500</h2>
-                  </div>
-               </div>
-           </article>
-           <article class="articulos1">
-               <div class="img-articulo1">[ imagen ]</div>
-               <div class="marco-presio">
-                  <h2>Mocha</h2>
-                  <p>Expreso, chocolate y leche</p>
-                  <div class="precio">
-                     <h2>$ 10.200</h2>
-                  </div>
-               </div>
-           </article>
-        </div>
-    </main>
-    <section class="contactos">
-        <div class="datos">
-           <h1>Contactanos</h1>
-           <p>Cra. #5 23-45 Ibague</p>
-           <p>+57 3584125987</p>
-           <p class="holaur">hala@aurora.co</p>
-           <p class="horario">Lun - Sab: 7am - 9pm</p>
-        </div>
-        <div class="datos">
-            <p>Nombre</p>
-            <input type="text" placeholder="Nombre" class="name">
-            <p>Email</p>
-            <input type="text" placeholder="ejemplo@gmail.com" class="name">
-            <button class="boton-enviar">enviar</button>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="info">
-            <div class="empresa">
-               <h1>Aurora café</h1>
-               <p>Cafe colombiano desde el 2015</p>
-            </div>
-        </div>
-        <div class="enlaces">
-            <h1>Enlaces</h1>
-            <p>Inicio</p>
-            <p>Productos</p>
-            <p>Blog</p>
-        </div>
-        <div class="redes">
-            <h1 class="redeso">Redes</h1>
-            <p class="f-i">Faceboock - instagram</p>
-            <p class="red">Faceboock</p>
-            <p class="red">instagram</p>
-            <p class="ticktok">Ticktok</p>
-        </div>
-    </footer>
+    <label for="operacion">Elije una operacion</label>
+    <select id="operaciones">
+        <option value="+">Suma</option>
+        <option value="-">Resta</option>
+        <option value="*">Multiplicacion</option>
+        <option value="/">Division</option>
+    </select>
+    <input type="number" id="valorUno">
+    <input type="number" id="valorDos">
+    <button onclick="calcular()">=</button>
+    <h1 id="resultado">0</h1>
+    
+    <script src="Js/practica.js"></script>
 </body>
 </html>
