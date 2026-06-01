@@ -1,0 +1,42 @@
+body{
+    background-color: #13508e;
+}
+.header{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    position: relative;
+    left: 36%;
+}
+.title{
+    border: 1px solid black;
+    width: 40%;
+    position: relative;
+    left: 36%;
+    background-color: rgb(245, 236, 236);
+}
+.total{
+    border: 1px solid black;
+    width: 40%;
+    position: relative;
+    left: 36%;
+    background-color: #03eb03;
+}
+.tabla{
+    position: relative;
+    left: 36%;
+}
+#agregar{
+    background-color: yellow;
+}
+.table{
+    background-color: aliceblue;
+}
+.mensaje{
+    background-color: #f5ecec;
+    width: 46%;
+    position: relative;
+    left: 36%;
+    color: red;
+}

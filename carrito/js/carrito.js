@@ -1,5 +1,6 @@
 let carrito =
 JSON.parse(localStorage.getItem("carrito")) || []
+mostrarCarrito()
 
 function agregar(){
 
@@ -12,6 +13,11 @@ function agregar(){
     let precio = Number(
         document.querySelector("#precio").value
     )
+    if(nombre === "" || cantidad <= 0 || precio <= 0){
+        document.querySelector("#alerta").textContent= "PORFAVOR COMPLETA TODOS LOS CAMPOS  GRACIAS :)"
+        return;
+    }
+    
 
     let producto = {
         id: Date.now(),
@@ -48,41 +54,31 @@ function eliminarProducto(id){
 
 function mostrarCarrito(){
 
-    let lista = document.querySelector("#lista")
+    let tabla = document.querySelector("#tablaProductos");
 
-    lista.innerHTML = ""
+    tabla.innerHTML = "";
 
-    let total = 0
+    let total = 0;
+    
+    tabla.innerHTML = "";
 
     carrito.forEach(producto => {
+        total += producto.precio * producto.cantidad;
 
-        let li = document.createElement("li")
+        tabla.innerHTML += `
+        <tr>
+           <td>${producto.id}</td>
+           <td>${producto.nombre}</td>
+           <td>${producto.precio}</td>  
+           <td>${producto.cantidad}</td>  
+           <td>
+              <button onclick="eliminarProducto(${producto.id})">eliminar</button>
+           </td>          
+        </tr>
+        `;
 
-        li.textContent =
-        producto.nombre +
-        " - $" + producto.precio +
-        " x " + producto.cantidad
 
-        let botonEliminar =
-        document.createElement("button")
-
-        botonEliminar.textContent = "Eliminar"
-
-        botonEliminar.onclick = function(){
-            eliminarProducto(producto.id)
-        }
-
-        li.appendChild(botonEliminar)
-
-        lista.appendChild(li)
-
-        total +=
-        producto.precio * producto.cantidad
-    })
-
-    document.querySelector("#total").textContent =
-    "Total: $" + total
+    });
+    document.querySelector("#total").textContent= total;
 }
 
-// MOSTRAR EL CARRITO AL RECARGAR
-mostrarCarrito()
