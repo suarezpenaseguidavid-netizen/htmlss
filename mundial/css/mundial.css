@@ -1,0 +1,48 @@
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.columna1{
+    height: 140dvh;
+    background-color: black;
+}
+.img{
+    height: 140dvh;
+    width: 99%;
+}
+.columna2{
+    border: 1px solid black;
+    height: 140dvh;
+    text-align: center;
+    background-color: black;
+    color: #f9d458;
+}
+.tikets{
+    border: 1px solid black;
+    margin: 1%;
+    text-align: left;
+    background-color: #f6ce5e;
+    color: black;
+}
+.comprar{
+    display: flex;
+    flex-direction: row;
+    gap: 50%;
+    margin: 1%;
+}
+.botonComprar{
+    height: 4dvh;
+    width: 29%;
+}
+.eventos{
+    height: 65dvh;
+    border: 1px solid black;
+    overflow: scroll;
+}
+.marco{
+    margin: 1%;
+}
+.total{
+    text-align: left;
+    margin: 1%;
+}

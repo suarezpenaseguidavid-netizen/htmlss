@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mundial</title>
+    <link rel="stylesheet" href="css/mundial.css">
+</head>
+<body>
+    <main class="main">
+       <div class="columna1">
+         <img src="img/f6fa3f789fbc462aded4d5d6db1766f6.jpg" class="img">
+       </div>
+       <aside class="columna2">
+           <div>
+               <h1>EVENTOS</h1>
+           </div>
+           <div class="eventos">
+             <div class="tikets">
+                <div class="marco">
+                   <h3>JUN 11</h3>
+                </div>
+                <div class="marco">
+                   <h3> MEXICO VS SUDAFRICA</h3>
+                </div>
+                <div class="marco">
+                   <h3>14:00</h3>
+                   <p>Ciuda de mexico - Estadio Azteca</p>
+                </div>
+                <div class="comprar">
+                   <p>$ 8'000.000</p>
+                   <button class="botonComprar" onclick="comprar('MEXICO VS SUDAFRICA', 8000000)">Comprar</button>
+                </div>
+             </div>
+             <div class="tikets">
+                <div class="marco">
+                   <h3>JUN 11</h3>
+                </div>
+                <div class="marco">
+                   <h3>COREA DEL SUR VS CHEQUIA</h3>
+                </div>
+                <div class="marco">
+                   <h3>21:00</h3>
+                   <p>Zapopan - Estadio Akron</p>
+                </div>
+                <div class="comprar">
+                   <p>$ 1'500.000</p>
+                   <button class="botonComprar" onclick="comprar('COREA DEL SUR VS CHEQUIA', 1500000)">Comprar</button>
+                </div>
+             </div>
+             <div class="tikets">
+                <div class="marco">
+                   <h3>JUN 12</h3>
+                </div>
+             <div class="marco">
+                 <h3>CANADA VS BOSNIA</h3>
+             </div>
+             <div class="marco">
+                 <h3>15:00</h3>
+                 <p>Toronto - Estadio BMO FIELD</p>
+             </div>
+             <div class="comprar">
+                 <p>$ 2'700.000</p>
+                 <button class="botonComprar" onclick="comprar('CANADA VS BOSNIA', 2700000)">Comprar</button>
+             </div>
+             </div>
+               <div class="tikets">
+                 <div class="marco">
+                    <h3>JUN 12</h3>
+                 </div>
+                 <div class="marco">
+                    <h3>ESTADOS UNIDOS VS PARAGUAY</h3>
+                 </div>
+                 <div class="marco">
+                   <h3>18:00</h3>
+                   <p>Inglewood - Estadio SoFi stadium</p>
+                 </div>
+                 <div class="comprar">
+                    <p>$ 3'500.000</p>
+                    <button class="botonComprar" onclick="comprar('ESTADOS UNIDOS VS PARAGUAY', 3500000)">Comprar</button>
+                 </div>
+              </div>
+              <div class="tikets">
+                 <div class="marco">
+                    <h3>JUN 13</h3>
+                 </div>
+                 <div class="marco">
+                    <h3>CATAR VS SUIZA</h3>
+                 </div>
+                 <div class="marco">
+                    <h3>12:00</h3>
+                    <p>Santa clara - Levi's Stadium</p>
+                 </div>
+                 <div class="comprar">
+                    <p>$ 1'150.000</p>
+                    <button class="botonComprar" onclick="comprar('CATAR VS SUIZA', 1150000)">Comprar</button>
+                 </div>
+               </div>
+               <div class="tikets">
+                  <div class="marco">
+                     <h3>JUN 13</h3>
+                  </div>
+                  <div class="marco">
+                    <h3>BRASIL VS MARRECUOS</h3>
+                  </div>
+                  <div class="marco">
+                    <h3>18:00</h3>
+                    <p>East Rutherford - Metlife stadium</p>
+                  </div>
+                  <div class="comprar">
+                    <p>$ 5'600.000</p>
+                    <button class="botonComprar" onclick="comprar('BRASIL VS MARRECUOS', 5600000)">Comprar</button>
+                  </div>
+              </div>
+           </div>
+           <table border="1">
+               <thead>
+                  <tr>
+                     <th>ID</th>
+                     <th>Evento</th>
+                     <th>Cantidad</th>
+                     <th>Precio</th>
+                     <th>Total</th>
+                     <th>Eliminar</th>
+                  </tr>
+               </thead>
+               <tbody id="tablaCarrito"></tbody>
+            </table>
+            <div class="total">
+               <h2>TOTAL A PAGAR: <span id="totalGeneral">$0</span></h2>
+            </div>
+       </aside>
+    </main>
+    <script src="js/mundial.js"></script>
+</body>
+</html>
