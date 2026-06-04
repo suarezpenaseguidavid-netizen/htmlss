@@ -3,16 +3,15 @@
     grid-template-columns: 1fr 1fr;
 }
 .columna1{
-    height: 140dvh;
-    background-color: black;
+    background-image: url(".img/logo-del-mundial-2026.jpg");
 }
 .img{
-    height: 140dvh;
+    height: 55dvh;
     width: 99%;
 }
 .columna2{
     border: 1px solid black;
-    height: 140dvh;
+    height: 110dvh;
     text-align: center;
     background-color: black;
     color: #f9d458;
@@ -45,4 +44,9 @@
 .total{
     text-align: left;
     margin: 1%;
+}
+.datosCliente{
+    text-align: left;
+    margin: 1%;
+
 }
