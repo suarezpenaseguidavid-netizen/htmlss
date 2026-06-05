@@ -129,20 +129,29 @@
                <tbody id="tablaCarrito"></tbody>
             </table>
             <div class="datosCliente">
-               <div class="total">
+               <div class="datosCliente">
+                  <div class="total">
                   <h2>TOTAL A PAGAR: <span id="totalGeneral">$0</span></h2>
                </div>
+
                <h2>Datos del Comprador</h2>
+
                <input type="text" id="nombre" placeholder="Nombre completo">
                <br><br>
+
                <input type="email" id="correo" placeholder="Correo electrónico">
                <br><br>
+
                <input type="tel" id="telefono" placeholder="Teléfono">
                <br><br>
+
                <button onclick="confirmarCompra()">
-                 Confirmar Compra
-               </button>
-               <p id="mensaje"></p>
+                    Confirmar Compra
+              </button>
+
+              <div id="ticketCompra"></div>
+           </div>
+               <div id="ticketCompra"></div>
             </div>
        </aside>
     </main>

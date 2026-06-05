@@ -82,3 +82,58 @@ function guardarDatos() {
         JSON.stringify(carrito)
     );
 }
+function confirmarCompra() {
+
+    let nombre = document.querySelector("#nombre").value.trim();
+    let correo = document.querySelector("#correo").value.trim();
+    let telefono = document.querySelector("#telefono").value.trim();
+
+    if(nombre === "" || correo === "" || telefono === ""){
+        alert("Complete todos los campos");
+        return;
+    }
+
+    if(carrito.length === 0){
+        alert("No hay tickets en el carrito");
+        return;
+    }
+
+    let contenido = `
+        <h2>TICKET DE COMPRA</h2>
+
+        <p><strong>Nombre:</strong> ${nombre}</p>
+        <p><strong>Correo:</strong> ${correo}</p>
+        <p><strong>Teléfono:</strong> ${telefono}</p>
+
+        <hr>
+    `;
+
+    carrito.forEach(ticket => {
+
+        contenido += `
+            <div class="ticket">
+
+                <h3>${ticket.partido}</h3>
+
+                <p><strong>ID:</strong> ${ticket.id}</p>
+
+                <p><strong>Cantidad de boletas:</strong>
+                ${ticket.cantidad}</p>
+
+                <p><strong>Precio por boleta:</strong>
+                $${ticket.precio}</p>
+
+                <p><strong>Total:</strong>
+                $${ticket.total}</p>
+
+                <p><strong>
+
+                <hr>
+
+            </div>
+        `;
+    });
+
+    document.querySelector("#ticketCompra").innerHTML =
+        contenido;
+}
