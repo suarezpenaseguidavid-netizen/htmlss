@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr;
 }
 .columna1{
-    background-image: url(".img/logo-del-mundial-2026.jpg");
+    background-color: #16ff16;
 }
 .img{
     height: 55dvh;
@@ -11,9 +11,9 @@
 }
 .columna2{
     border: 1px solid black;
-    height: 169dvh;
+    height: 236dvh;
     text-align: center;
-    background-color: black;
+    background-color: #0e492e;
     color: #f9d458;
 }
 .tikets{

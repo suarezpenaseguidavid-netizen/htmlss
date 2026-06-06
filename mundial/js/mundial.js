@@ -2,8 +2,8 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 mostrarCarrito();
 
-function comprar(partido, precio){
-
+function comprar(partido, precio, fecha, estadio){
+    
     let ticketExistente = carrito.find(
         ticket => ticket.partido === partido
     );
@@ -19,6 +19,8 @@ function comprar(partido, precio){
         let ticket = {
             id: Date.now(),
             partido: partido,
+            fecha: fecha,
+            estadio: estadio,
             cantidad: 1,
             precio: precio,
             total: precio
@@ -98,12 +100,28 @@ function confirmarCompra() {
         return;
     }
 
+    let totalTickets = carrito.reduce(
+        (acumulador, ticket) => acumulador + ticket.cantidad,
+        0
+    );
+
+    let precioTotal = carrito.reduce(
+        (acumulador, ticket) => acumulador + ticket.total,
+        0
+    );
+
     let contenido = `
-        <h2>TICKET DE COMPRA</h2>
+        <h2>FACTURA DE COMPRA</h2>
 
         <p><strong>Nombre:</strong> ${nombre}</p>
         <p><strong>Correo:</strong> ${correo}</p>
         <p><strong>Teléfono:</strong> ${telefono}</p>
+
+        <p><strong>Total de tickets comprados:</strong>
+        ${totalTickets}</p>
+
+        <p><strong>Precio total:</strong>
+        $${precioTotal}</p>
 
         <hr>
     `;
@@ -117,16 +135,14 @@ function confirmarCompra() {
 
                 <p><strong>ID:</strong> ${ticket.id}</p>
 
-                <p><strong>Cantidad de boletas:</strong>
-                ${ticket.cantidad}</p>
+                <p><strong>Fecha del partido:</strong>
+                ${ticket.fecha}</p>
 
                 <p><strong>Precio por boleta:</strong>
                 $${ticket.precio}</p>
 
-                <p><strong>Total:</strong>
-                $${ticket.total}</p>
-
-                <p><strong>
+                <p><strong>Estadio:</strong>
+                ${ticket.estadio}</p>
 
                 <hr>
 
@@ -134,6 +150,31 @@ function confirmarCompra() {
         `;
     });
 
-    document.querySelector("#ticketCompra").innerHTML =
-        contenido;
+    contenido += `
+    <br>
+    <button id="btnImprimir"onclick="imprimirTicket()">
+        Imprimir 
+    </button>
+`;
+
+    document.querySelector("#ticketCompra").innerHTML = contenido;
+    
+}
+function imprimirTicket() {
+
+    let boton = document.querySelector("#btnImprimir");
+
+    boton.style.display = "none";
+
+    let ticket = document.querySelector("#ticketCompra").innerHTML;
+
+    let ventana = window.open("", "_blank");
+
+    ventana.document.write(ticket);
+
+    ventana.document.close();
+
+    ventana.print();
+
+    boton.style.display = "inline-block";
 }
