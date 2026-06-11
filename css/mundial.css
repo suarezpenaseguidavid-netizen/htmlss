@@ -1,9 +1,10 @@
+
 .main{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 .columna1{
-    background-color: #16ff16;
+    
 }
 .img{
     height: 55dvh;
@@ -11,10 +12,11 @@
 }
 .columna2{
     border: 1px solid black;
-    height: 236dvh;
+    height: 222dvh;
     text-align: center;
-    background-color: #0e492e;
+    background-color: #700001;
     color: #f9d458;
+    overflow: scroll;
 }
 .tikets{
     border: 1px solid black;
