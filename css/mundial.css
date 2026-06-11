@@ -14,15 +14,17 @@
     border: 1px solid black;
     height: 222dvh;
     text-align: center;
-    background-color: #700001;
-    color: #f9d458;
+    background-image: url("../img/panorama-del-estadio-de-fútbol-de-sol.webp");
+    color: white;
     overflow: scroll;
+    background-size: 276%;
+   
 }
 .tikets{
     border: 1px solid black;
     margin: 1%;
     text-align: left;
-    background-color: #f6ce5e;
+    background-color: #d8daddb8;
     color: black;
 }
 .comprar{

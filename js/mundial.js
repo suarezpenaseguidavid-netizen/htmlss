@@ -1,82 +1,24 @@
+const datosGuardados = JSON.parse(
+    localStorage.getItem("datosCliente")
+);
+
+if (datosGuardados) {
+
+    document.querySelector("#nombre").value =
+        datosGuardados.nombre || "";
+
+    document.querySelector("#documento").value =
+        datosGuardados.documento || "";
+
+    document.querySelector("#correo").value =
+        datosGuardados.correo || "";
+
+    document.querySelector("#telefono").value =
+        datosGuardados.telefono || "";
+}
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 mostrarCarrito();
-
-function comprar(partido, precio, fecha, estadio){
-    
-    let ticketExistente = carrito.find(
-        ticket => ticket.partido === partido
-    );
-
-    if(ticketExistente){
-
-        ticketExistente.cantidad++;
-        ticketExistente.total =
-            ticketExistente.cantidad * ticketExistente.precio;
-
-    }else{
-
-        let ticket = {
-            id: Date.now(),
-            partido: partido,
-            fecha: fecha,
-            estadio: estadio,
-            cantidad: 1,
-            precio: precio,
-            total: precio
-        };
-
-        carrito.push(ticket);
-    }
-
-    localStorage.setItem(
-        "carrito",
-        JSON.stringify(carrito)
-    );
-
-    mostrarCarrito();
-}
-
-function mostrarCarrito() {
-
-    let tabla = document.querySelector("#tablaCarrito");
-
-    tabla.innerHTML = "";
-
-    carrito.forEach(ticket => {
-
-        tabla.innerHTML += `
-            <tr>
-                <td>${ticket.id}</td>
-                <td>${ticket.partido}</td>
-                <td>${ticket.cantidad}</td>
-                <td>$${ticket.precio}</td>
-                <td>$${ticket.total}</td>
-                <td>
-                    <button onclick="eliminar(${ticket.id})">
-                        Eliminar
-                    </button>
-                </td>
-            </tr>
-        `;
-    });
-
-    let totalGeneral = carrito.reduce(
-        (acumulador, ticket) => acumulador + ticket.total,
-        0
-    );
-
-    document.querySelector("#totalGeneral").textContent =
-        `$${totalGeneral}`;
-}
-
-function eliminar(id) {
-
-    carrito = carrito.filter(ticket => ticket.id !== id);
-
-    guardarDatos();
-    mostrarCarrito();
-}
 
 function guardarDatos() {
     localStorage.setItem(
@@ -84,44 +26,123 @@ function guardarDatos() {
         JSON.stringify(carrito)
     );
 }
-function confirmarCompra() {
 
-    let nombre = document.querySelector("#nombre").value.trim();
-    let correo = document.querySelector("#correo").value.trim();
-    let telefono = document.querySelector("#telefono").value.trim();
-
-    if(nombre === "" || correo === "" || telefono === ""){
-        alert("Complete todos los campos");
-        return;
-    }
-
-    if(carrito.length === 0){
-        alert("No hay tickets en el carrito");
-        return;
-    }
-
-    let totalTickets = carrito.reduce(
-        (acumulador, ticket) => acumulador + ticket.cantidad,
+function calcularTotalGeneral() {
+    return carrito.reduce(
+        (acumulador, ticket) => acumulador + ticket.total,
         0
     );
+}
 
-    let precioTotal = carrito.reduce(
-        (acumulador, ticket) => acumulador + ticket.total,
+function comprar(partido, precio, fecha, estadio) {
+
+    const ticketExistente = carrito.find(
+        ticket => ticket.partido === partido
+    );
+
+    if (ticketExistente) {
+
+        ticketExistente.cantidad++;
+        ticketExistente.total =
+            ticketExistente.cantidad * ticketExistente.precio;
+
+    } else {
+
+        carrito.push({
+            id: Date.now(),
+            partido,
+            fecha,
+            estadio,
+            cantidad: 1,
+            precio,
+            total: precio
+        });
+    }
+
+    guardarDatos();
+    mostrarCarrito();
+}
+
+function mostrarCarrito() {
+
+    const tabla = document.querySelector("#tablaCarrito");
+
+    tabla.innerHTML = carrito.map(ticket => `
+        <tr>
+            <td>${ticket.id}</td>
+            <td>${ticket.partido}</td>
+            <td>${ticket.cantidad}</td>
+            <td>$${ticket.precio}</td>
+            <td>$${ticket.total}</td>
+            <td>
+                <button onclick="eliminar(${ticket.id})">
+                    Eliminar
+                </button>
+            </td>
+        </tr>
+    `).join("");
+
+    document.querySelector("#totalGeneral").textContent =
+        `$${calcularTotalGeneral()}`;
+}
+
+function eliminar(id) {
+
+    carrito = carrito.filter(
+        ticket => ticket.id !== id
+    );
+
+    guardarDatos();
+    mostrarCarrito();
+}
+
+function obtenerDatosCliente() {
+
+    return {
+        nombre: document.querySelector("#nombre").value.trim(),
+        documento: document.querySelector("#documento").value.trim(),
+        correo: document.querySelector("#correo").value.trim(),
+        telefono: document.querySelector("#telefono").value.trim()
+    };
+}
+
+function validarCompra(datosCliente) {
+
+    const { nombre, documento, correo, telefono } = datosCliente;
+
+    if (!nombre || !documento || !correo || !telefono) {
+        alert("Complete todos los campos");
+        return false;
+    }
+
+    if (carrito.length === 0) {
+        alert("No hay tickets en el carrito");
+        return false;
+    }
+
+    return true;
+}
+
+function generarFactura(datosCliente) {
+
+    const totalTickets = carrito.reduce(
+        (total, ticket) => total + ticket.cantidad,
         0
     );
 
     let contenido = `
         <h2>FACTURA DE COMPRA</h2>
 
-        <p><strong>Nombre:</strong> ${nombre}</p>
-        <p><strong>Correo:</strong> ${correo}</p>
-        <p><strong>Teléfono:</strong> ${telefono}</p>
+        <p><strong>Nombre:</strong> ${datosCliente.nombre}</p>
+        <p><strong>Documento:</strong> ${datosCliente.documento}</p>
+        <p><strong>Correo:</strong> ${datosCliente.correo}</p>
+        <p><strong>Teléfono:</strong> ${datosCliente.telefono}</p>
 
-        <p><strong>Total de tickets comprados:</strong>
+        <p><strong>Total de tickets:</strong>
         ${totalTickets}</p>
 
         <p><strong>Precio total:</strong>
-        $${precioTotal}</p>
+        $${calcularTotalGeneral()}</p>
 
         <hr>
     `;
@@ -135,10 +156,10 @@ function confirmarCompra() {
 
                 <p><strong>ID:</strong> ${ticket.id}</p>
 
-                <p><strong>Fecha del partido:</strong>
+                <p><strong>Fecha:</strong>
                 ${ticket.fecha}</p>
 
-                <p><strong>Precio por boleta:</strong>
+                <p><strong>Precio:</strong>
                 $${ticket.precio}</p>
 
                 <p><strong>Estadio:</strong>
@@ -151,27 +172,46 @@ function confirmarCompra() {
     });
 
     contenido += `
-    <br>
-    <button id="btnImprimir"onclick="imprimirTicket()">
-        Imprimir 
-    </button>
-`;
+        <button id="btnImprimir"
+                onclick="imprimirTicket()">
+            Imprimir
+        </button>
+    `;
 
-    document.querySelector("#ticketCompra").innerHTML = contenido;
-    
+    return contenido;
 }
+function confirmarCompra() {
+
+    const datosCliente = obtenerDatosCliente();
+
+    console.log(datosCliente);
+
+    if (!validarCompra(datosCliente)) {
+        return;
+    }
+
+    localStorage.setItem(
+        "datosCliente",
+        JSON.stringify(datosCliente)
+    );
+
+    document.querySelector("#ticketCompra").innerHTML =
+        generarFactura(datosCliente);
+}
+
 function imprimirTicket() {
 
-    let boton = document.querySelector("#btnImprimir");
+    const boton =
+        document.querySelector("#btnImprimir");
 
     boton.style.display = "none";
 
-    let ticket = document.querySelector("#ticketCompra").innerHTML;
+    const contenido =
+        document.querySelector("#ticketCompra").innerHTML;
 
-    let ventana = window.open("", "_blank");
+    const ventana = window.open("", "_blank");
 
-    ventana.document.write(ticket);
-
+    ventana.document.write(contenido);
     ventana.document.close();
 
     ventana.print();
