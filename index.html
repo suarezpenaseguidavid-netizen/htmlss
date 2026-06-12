@@ -8,13 +8,6 @@
 </head>
 <body>
     <main class="main">
-      <!--
-       <div class="columna1">
-          <img src="img/FWC26_Official-Emblem_3-633x633.jpg" class="img">
-          <img src="img/638043234035959.Y3JvcCwxOTIwLDE1MDEsMCwyMDk.jpg" class="img">
-          <img src="img/Flag_of_FIFA.svg" class="img">
-          <img src="img/fifa-presenta-logo-mundial-2026.webp" class="img">
-       </div>-->
        <aside class="columna2">
            <div>
                <h1>EVENTOS</h1>
@@ -123,9 +116,7 @@
                   <tr>
                      <th>ID</th>
                      <th>Evento</th>
-                     <th>Cantidad</th>
                      <th>Precio</th>
-                     <th>Total</th>
                      <th>Eliminar</th>
                   </tr>
                </thead>
@@ -133,8 +124,9 @@
             </table>
             <div class="datosCliente">
                <div class="informacionCliente">
-                  
+                  <h1 id="alerta2"></h1>
                   <h2>TOTAL A PAGAR: <span id="totalGeneral">$0</span></h2>
+                  
                </div>
 
                <h2>Datos del Comprador</h2>
@@ -150,7 +142,7 @@
 
                <input type="tel" id="telefono" placeholder="Teléfono">
                <br><br>
-
+               <h1 id="alerta"></h1>
                <button onclick="confirmarCompra()">
                     Confirmar Compra
               </button>

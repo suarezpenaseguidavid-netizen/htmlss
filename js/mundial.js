@@ -34,32 +34,25 @@ function calcularTotalGeneral() {
     );
 }
 
-function comprar(partido, precio, fecha, estadio) {
+function comprar(partido, precio, fecha, estadio){
 
-    const ticketExistente = carrito.find(
-        ticket => ticket.partido === partido
+    let ticket = {
+        id: Date.now() + Math.floor(Math.random() * 1000),
+        partido: partido,
+        precio: precio,
+        fecha: fecha,
+        estadio: estadio,
+        cantidad: 1,
+        total: precio
+    };
+
+    carrito.push(ticket);
+
+    localStorage.setItem(
+        "carrito",
+        JSON.stringify(carrito)
     );
 
-    if (ticketExistente) {
-
-        ticketExistente.cantidad++;
-        ticketExistente.total =
-            ticketExistente.cantidad * ticketExistente.precio;
-
-    } else {
-
-        carrito.push({
-            id: Date.now(),
-            partido,
-            fecha,
-            estadio,
-            cantidad: 1,
-            precio,
-            total: precio
-        });
-    }
-
-    guardarDatos();
     mostrarCarrito();
 }
 
@@ -71,9 +64,7 @@ function mostrarCarrito() {
         <tr>
             <td>${ticket.id}</td>
             <td>${ticket.partido}</td>
-            <td>${ticket.cantidad}</td>
             <td>$${ticket.precio}</td>
-            <td>$${ticket.total}</td>
             <td>
                 <button onclick="eliminar(${ticket.id})">
                     Eliminar
@@ -111,12 +102,14 @@ function validarCompra(datosCliente) {
     const { nombre, documento, correo, telefono } = datosCliente;
 
     if (!nombre || !documento || !correo || !telefono) {
-        alert("Complete todos los campos");
+        document.querySelector("#alerta").textContent =
+    "Complete todos los campos";
         return false;
     }
 
     if (carrito.length === 0) {
-        alert("No hay tickets en el carrito");
+        document.querySelector("#alerta2").textContent =
+    "No hay tickets en el carrito";
         return false;
     }
 
