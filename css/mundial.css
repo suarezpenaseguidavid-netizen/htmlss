@@ -1,8 +1,4 @@
 
-.main{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
 .columna1{
     
 }
@@ -12,12 +8,12 @@
 }
 .columna2{
     border: 1px solid black;
-    height: 222dvh;
+    height: 98dvh;
     text-align: center;
-    background-image: url("../img/panorama-del-estadio-de-fútbol-de-sol.webp");
+    background-image: url("../img/istockphoto-538036293-612x612.jpg");
     color: white;
     overflow: scroll;
-    background-size: 276%;
+    background-size: 129%;
    
 }
 .tikets{
@@ -49,8 +45,18 @@
     text-align: left;
     margin: 1%;
 }
+table{
+    margin: 20px auto;
+    background-color: #00000078;
+}
+.informacionCliente{
+    background-color: #00000080;
+    width: 30%;
+}
 .datosCliente{
-    text-align: left;
-    margin: 1%;
-
+    text-align: -webkit-center;
+}
+#ticketCompra{
+    text-align: initial;
+    margin: 4%;
 }
